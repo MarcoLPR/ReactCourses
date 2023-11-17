@@ -6,6 +6,7 @@ import { Label } from "../shared/Label/Label";
 import { capitilizeFirstLetter } from "../../utils/capitilizeFirstLetter";
 import { FavoriteButton } from "../shared/Button/FavoriteButton";
 import { useNavigate } from "react-router";
+import { TypeIcons } from "../shared/TypeIcons/TypeIcons";
 
 interface PokemonCardProps {
   pokemon?: PokemonListItem;
@@ -24,6 +25,7 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, pokemonId }) 
   return (
     <div className={`${mainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`}>
       <FavoriteButton pokemonId={pokemonData?.id ?? 0} />
+      <TypeIcons types={pokemonData?.types ?? []} />
       <div className="flex flex-col items-center mx-auto" onClick={onClick}>
         <Label>{pokemonData?.name ? capitilizeFirstLetter(pokemonData?.name) : ''}</Label>
         <img
