@@ -19,6 +19,7 @@ export const TypeIcons: React.FC<TypeIconsProps> = ({ types }) => {
           key={type.type.name}
           className="bg-white p-1 rounded-full w-6 h-6 mb-1"
           onClick={() => onClick(type)}
+          data-testid="type-icon"
         >
           <img src={mapTypeToIcon(type)} alt={`${type.type.name} icon`} />
         </div>

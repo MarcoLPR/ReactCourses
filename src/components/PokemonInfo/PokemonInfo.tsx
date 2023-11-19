@@ -17,7 +17,7 @@ export const PokemonInfo = () => {
   );
 
   return (
-    <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg">
+    <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg" data-testid="pokemon-info">
       <div
         className={`${mainType}-background w-72 h-72 rounded-l-lg items-center`}
       >

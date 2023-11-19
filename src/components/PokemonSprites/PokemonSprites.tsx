@@ -11,7 +11,7 @@ export const PokemonSprites: React.FC<PokemonSpritesProps> = ({
   const { pokemonData } = useGetPokemon(pokemonName);
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row" data-testid="pokemon-sprites">
       <div>
         {pokemonData?.sprites?.front_default && (
           <>
