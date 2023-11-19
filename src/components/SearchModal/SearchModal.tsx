@@ -33,8 +33,8 @@ const SearchModal: React.FC = () => {
       }
     >
       <h6>Search</h6>
-      <input type="text" value={filter} onChange={handleInputChange} className="border p-2" />
-      <button onClick={onClickSearch}>Search</button>
+      <input type="text" value={filter} onChange={handleInputChange} className="border p-2" data-testid="search-input" />
+      <button onClick={onClickSearch} data-testid="search-submit-button">Search</button>
       {pokemonData?.id && <PokemonCard pokemonId={pokemonData.id} />}
     </Modal>
   );
